@@ -7,3 +7,10 @@
 </h3>
 
 <p align="center">Here you can find some of my studies and notes about Kotlin.</p>
+
+## Kotlin Fundamentals
+
+You can find it in:
+> app > src > main > kotlinudemy > KotlinBasics.kt 
+
+## OOP Basics
