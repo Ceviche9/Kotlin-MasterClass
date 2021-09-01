@@ -83,6 +83,22 @@ fun main() {
     is String -> println("$x is a String")
     else -> println("$x is none of the above")
   }
+  
+  // While loop
+  var condition = 1
+  while(condition <= 4) {
+    println("The value of condition is $condition")
+    condition += 1
+  }
+
+  // For loops
+  for (num in 1..10) {
+    print("$num")
+  }
+
+  for(i in 10 downTo 1 step 2) {
+    print("$i")
+  }
 
 }
 ```
