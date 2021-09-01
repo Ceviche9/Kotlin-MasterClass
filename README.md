@@ -16,8 +16,7 @@ You can find it in:
 ```kt
 
 fun main() {
-  // TODO: adicionar nova funcionalidade
-  // Abaixo é possivel ver alguns tipos primitivos do kotlin
+  // Below you can see some of kotlin's primitive types
   // type String
   val myName: String = "Tundê"
   // type Int
@@ -36,9 +35,9 @@ fun main() {
   val firstLetter = mySr[mySr.length - 1]
   // println(firstLetter)
 
-  // Operadores aritméticos (+, -, *, /,%)
+  // Arithmetic operators (+, -, *, /,%)
 
-  // Operadores de comparação (==, !=, > , < , <= , >=)
+  // Comparison Operators (==, !=, > , < , <= , >=)
 
   // If Statement
   val heightPerson1 = 170
@@ -54,10 +53,10 @@ fun main() {
 
   // When
 
-  // Criando uma variável com um valor
+  // Creating a variable with a value
   val season = 3
   when(season) {
-    // Se o valor da variável season for 1 será printado Spring
+    // If the value of the variable season is 1, Spring will be printed
     1 -> println("Spring")
     2 -> println("Summer")
     3 -> {
@@ -67,16 +66,16 @@ fun main() {
     4 -> println("end")
     else -> println("Invalid season")
   }
-  // Outro exemplo
+  // Another example
   val month = 3
   when(month) {
-    // Criando um range
+    // Creating a Range
     in 3..5 -> println("Spring")
     in 6..8 -> println("Summer")
     else -> println("Invalid season =")
   }
 
-  // Outro exemplo
+  // Another example
   val x : Any = 13.37
   when(x) {
     is Int -> println("$x is an Int")
