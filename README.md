@@ -103,4 +103,4 @@ fun main() {
 }
 ```
 
-## OOP Basics
+## Kotlin Functions
