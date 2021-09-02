@@ -83,8 +83,43 @@ fun main() {
     is String -> println("$x is a String")
     else -> println("$x is none of the above")
   }
+  
+  // While loop
+  var condition = 1
+  while(condition <= 4) {
+    println("The value of condition is $condition")
+    condition += 1
+  }
+
+  // For loops
+  for (num in 1..10) {
+    print("$num")
+  }
+
+  for(i in 10 downTo 1 step 2) {
+    print("$i")
+  }
 
 }
 ```
 
-## OOP Basics
+## Kotlin Functions
+You can find it in:
+> app > src > main > kotlinudemy > KotlinFuntions.kt 
+
+```kt
+// THe main function is the entry point of the program
+fun main() {
+  myFunction()
+}
+
+// Parameter
+fun addUp(a: Int, b: Int): Unit {
+  val s = a + b
+  return println("The result is $s")
+}
+
+fun myFunction() {
+  addUp(20, 30)
+}
+```
