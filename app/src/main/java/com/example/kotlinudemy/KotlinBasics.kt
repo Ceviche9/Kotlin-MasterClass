@@ -86,4 +86,14 @@ fun main() {
     print("$i")
   }
 
+  // Null
+
+  var nullableName: String? = "Tundê"
+  nullableName = null
+
+  // Setting a default value if the variable name is null
+  val name = nullableName ?: "Guest"
+  // ?: -> Elvis Operator
+  println("Hello, $name")
+
 }
