@@ -196,7 +196,7 @@ class Car() {
 
 }
 ```
-## Kotlin OOP Inheritance
+## Kotlin OOP Inheritance and Interface
 You can find it in:
 > app > src > main > kotlinudemy > Inheritance.kt
 
