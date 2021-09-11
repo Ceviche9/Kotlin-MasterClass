@@ -123,3 +123,131 @@ fun myFunction() {
   addUp(20, 30)
 }
 ```
+
+## Kotlin OOP Basics
+You can find it in:
+> app > src > main > kotlinudemy > OOPBasics.kt
+
+```kt
+  
+package com.example.kotlinudemy
+
+fun main() {
+  var user = Person("Tundê", "Cavalcante", 21)
+  user.hobby = "Play soccer"
+  user.stateHobby()
+}
+
+class Person (firstName: String = "Undefined", lastName: String = "NoLastName") {
+
+  //Member Variables - Properties
+  var age: Int? = null
+  var hobby: String = "Watch Netflix"
+
+  // Initializer Block
+  init {
+    println("New User created, Welcome $firstName")
+  }
+
+  // Secondary Constructor
+  constructor(firstName: String, lastName: String, age: Int): this(firstName, lastName){
+    this.age = age
+  }
+
+  // Methods - Member Functions
+  fun stateHobby() {
+    println("My hooby is $hobby")
+  }
+
+}
+```
+## Kotlin OOP Getters and Setters
+You can find it in:
+> app > src > main > kotlinudemy > GetterAndSetter.kt
+
+```kt
+package com.example.kotlinudemy
+
+import java.lang.IllegalArgumentException
+
+fun main() {
+  val myCar = Car()
+  println("Brand is ${myCar.myBrand} and the Model is ${myCar.Model}")
+  // Set
+  myCar.maxSpeed = 300
+  // Get
+  println("Max speed is ${myCar.maxSpeed}")
+}
+
+class Car() {
+  val myBrand: String = "BMW"
+  // Custom getter
+    get() {
+      return field.toLowerCase()
+    }
+
+  var maxSpeed: Int = 250
+    set(value) {
+      field = if(value > 0) value else throw IllegalArgumentException("Maxspeed can not be last then 0")
+    }
+
+  var Model: String = "M5"
+    private set
+
+}
+```
+## Kotlin OOP Inheritance
+You can find it in:
+> app > src > main > kotlinudemy > Inheritance.kt
+
+```kt
+package com.example.kotlinudemy
+
+fun main() {
+  val myCar = NewCar("A3", "Audi")
+  val myECar = ElectricCar("S-Model", "Tesla",85.0)
+
+  myECar.extendRange(200.00)
+
+  myECar.drive()
+
+  // Polymorphism
+  myCar.drive(200.00)
+  myECar.drive(200.0)
+}
+
+// Para utilizar os métodos e propriedades dessa classe precisamos colocar o "open"
+// NewCar => Super Class
+open class NewCar (val name: String, val brand: String) {
+  // Para permitir que uma propriedade possa ser sobreescrita.
+  open var range: Double = 0.0
+
+  fun extendRange(amount: Double) {
+    if(amount > 0 )
+      range += amount
+  }
+
+  // Para permitir que um método seja sobreescrito
+  open fun drive(distance: Double){
+    println("The ${this.name}, Drove for $distance Km" )
+  }
+
+}
+// O carro elétrico pode ter os parâmetros da sua super classe e também pode ter parâmetreos adicionais.
+class ElectricCar(name: String, brand: String, batteryLife: Double): NewCar(name, brand) {
+
+  //Para sobreescrever algo da Super classe
+  override var range = batteryLife * 6
+
+  // Método que foi sobreescrito
+  override fun drive(distance: Double) {
+    println("Drove for $distance KM on electricity")
+  }
+  // Método que foi criado
+  fun drive() {
+    println("Drove for $range KM on electricity")
+  }
+
+}
+```
+
